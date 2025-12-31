@@ -17,4 +17,7 @@ also note that I'll provide only amd64 builds but it is as easy as swapping out 
 
 only the latest 3 builds will be synced to my github dm me for older builds.
 
+# Very important
+to not need to install dependencies go in the Makefile with nano (or your editor of choice) and delete the "build" command on the entry install.
+
 happy drasling :)
