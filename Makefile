@@ -19,10 +19,9 @@ build: prebuild
 	export CGO_LDFLAGS="-Wl,-z,relro,-z,now"
 	go build
 
-install: build
-	install -Dm 755 drasl "$(prefix)/bin/drasl"
-	install -Dm 644 LICENSE "$(prefix)/share/licenses/drasl/LICENSE"
-	mkdir -p "$(prefix)/share/drasl/"
+install: chmod 755 drasl
+        cp drasl "$(prefix)/bin/drasl"
+        mkdir -p "$(prefix)/share/drasl/"
 	cp -R assets view public locales "$(prefix)/share/drasl/"
 
 clean:
