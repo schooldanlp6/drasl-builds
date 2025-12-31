@@ -14,11 +14,3 @@ install: chmod 755 drasl
         cp drasl "$(prefix)/bin/drasl"
         mkdir -p "$(prefix)/share/drasl/"
         cp -R assets view public locales "$(prefix)/share/drasl/"
-
-clean:
-	rm -f drasl
-	rm -f swagger.json
-	rm -f public/bundle.js
-
-test: prebuild
-	go test
